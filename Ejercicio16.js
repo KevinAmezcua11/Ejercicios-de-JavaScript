@@ -4,12 +4,12 @@ Crea una función que valide si una cadena de texto es un correo electrónico v�
 */
 
 function validarEmail(email) {
-    const regex = /^[-\w,%+]{1,64}@(?:[A-Z0-9-]\.){1,125}[A-Z]{2,63}$/i;
+    const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/
 
-    if(regex) {
-        console.log("Email Valido");
+    if(regex.test(email)) {
+        console.log("El correo " + email + " es VALIDO.");
     } else {
-        console.log("Email Invalido");
+        console.log("El correo " + email + " es INVALIDO.");
     }
 }
 
